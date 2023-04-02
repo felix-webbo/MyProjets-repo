@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>SCT-253-034/2021  FELIX WEBBO</title>
+    <style>
+        nav{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 10px 10px 10px 10px;
+            padding: 1rem;
+            width:95%;
+            height: 3.6rem;
+            border-radius: 0rem;
+            box-shadow:  10px 10px 10px 10px rgb(30, 41, 46);
+            position: fixed;
+            background-color: #696e3b;
+            top: 0px;
+            z-index: 999;
+            
+        }
+        figcaption a{
+            text-decoration: none;
+            transition: 0.5s;
+            font-size: 10px;
+            padding-top: -2px;
+
+
+        }
+        figcaption a:hover{
+            text-decoration: underline;
+            color: goldenrod;
+        }
+        .nav-link ul{
+            display: flex;
+            flex-direction: row;
+        }
+        .nav-link ul li{
+            list-style: none;
+            margin: 10px 10px;
+        }
+        .nav-link ul li::after{
+            content: "";
+            display: block;
+            background-color: brown;
+            height: 5px;
+            border-radius: 5px;
+            margin: auto;
+            width: 0px;
+            transition: 1s;
+        }
+        .nav-link ul li:hover::after{
+            width: 100%;
+        }
+        .nav-link ul li a{
+            text-decoration: none;
+            color: rgb(20, 17, 17);
+            transition: 1s;
+            font-size: 20px;
+        }
+        .nav-link ul li a:hover{
+            color: orange;
+            font-weight: 900;
+        }
+        .login{
+            margin: 20px 5px;
+            transition: 1s;
+        }
+        .login i{
+            padding: 10px 10px;
+            font-size: 30px;
+            transition: 1s;
+        }
+        .login i:hover{
+            color: orange;
+        } 
+        .login span{
+            font-size: 15px;
+        }
+        .sec1{
+            background-image: linear-gradient(rgba(5, 3, 3, 0.952), #1e1e31), url(images/building3.jpg);
+            background-position: center;
+            background-size: cover;
+            height: ;
+            color: whitesmoke;
+            align-items: center
+        }
+        .sec1 h1{
+            padding-top: 15%;
+            color: whitesmoke;
+            font-size: 40px;
+        }
+        .sec1 h2{
+            padding: 20px 30px;
+            font-size: 30px;
+        }
+        .container{
+            padding-left: 10rem;
+            display: flex;
+        }
+        .container .layer{
+            background-color: bisque;
+            width: 7px;
+            height: 200px;
+            border-radius: 5px;
+            
+        }
+        .container p{
+            padding-left: 10px;
+            font-size: 20px;
+        }
+        .sec1-1{
+            margin-bottom: 5rem;
+            padding-bottom: 5rem;
+        }
+        hr{
+            height: 5px;
+            border-radius: 5px;
+            background-color: orangered;
+            box-shadow: 5px 5px 5px 5px gray;
+        }
+        .auto-type span{
+            color: goldenrod;
+            font-size: 30px;
+        }
+        .container p span.cursor {
+            display: inline-block;
+            background-color: #ccc;
+            margin-left: 0.1rem;
+            width: 3px;
+            animation: blink 1s infinite;
+        }
+        .auto-type p span.cursor.typing {
+             animation: none;
+        }
+        @keyframes blink {
+            0%  { background-color: #ccc; }
+            49% { background-color: #ccc; }
+            50% { background-color: transparent; }
+            99% { background-color: transparent; }
+            100%  { background-color: #ccc; }
+        }
+
+        .sec2 h1{
+            background-color:darkgoldenrod;
+            width: fit-content;
+            box-sizing:border-box;
+            padding: 5px;
+        }
+        .container img{
+            margin-left: 3rem;
+        }
+        .location{
+            display: flex;
+            flex-wrap: wrap;
+            background-color:darkkhaki;
+            margin: 5px;
+            padding:5px 4rem;
+            border-radius: 3px;
+            align-items: center;
+        }
+        #socialmedia a{
+            padding: 5px;
+            font-size: 20px;
+            transition: 1s;
+        }
+        #socialmedia a:hover{
+            color: goldenrod;
+        }
+        .location #office{
+            border-radius: 5px;
+            background-color: aliceblue;
+            width: 265px;
+            padding: 10px;
+            transition: 1s;
+
+
+        }
+        .location img{
+            transition: 1s;
+        }
+        .location img:hover{
+            width: 220px;
+            height: 170px;
+        }
+        .location #office:hover{
+            background-color: #eee;
+            border-radius: 5px;
+            box-shadow: inset 5px 5px 5px 5px;
+            position: relative;
+            top: -0.5rem;
+        }
+        #div-left{
+            display: flex;
+        }
+        #div-left img{
+            padding-right: 5px;
+        }
+        #div-left #downl{
+            padding: 5px;
+            background-color: goldenrod;
+        }
+        #div-left i{
+            margin: 10px;
+            font-size: 40px;
+            transition: 1s;
+        }
+        #div-left i:hover{
+            color: goldenrod;
+        }
+        #div-left span{
+            background-color: white;
+            border-radius: 5px;
+        }
+        .footer-top{
+            background-color: #585757;
+        }
+        .footer-top{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 3rem;
+        }
+        #div-right p input{
+            padding: 5px;
+            border-radius: 2px;
+        }
+        #div-right p button{
+            padding: 5px;
+            background-color: goldenrod;
+        }
+        #div-right p button:hover{
+            background-color: gold;
+        }
+        .more{
+            background-color: rgba(5, 1, 1, 0.918);
+            padding: 10px 5%;
+        }
+        .morecont{
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .cont h3{
+            color: goldenrod;
+        }
+        .cont ul li{
+            list-style: none;
+            padding: 0px;
+        }
+        .cont ul li a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+        .cont ul li a:hover{
+            text-decoration: underline;
+        }
+        .copywrite{
+            background-color: wheat;
+        
+            margin: 5px;padding: 5px;
+        }
+        .copywrite .socialmedia a{
+            font-size: 50px;
+        }
+        marquee{
+            background-color: coral;
+            border-radius: 5rem;
+            height: 3.5rem;
+        }
+        .register{
+            position: absolute;
+            top: 110%;
+        
+            border-radius: 5px;
+            
+            
+        }
+        .sign{
+            margin-bottom: 30px;
+            position: relative;
+    
+        }
+        input{
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            outline: 0;
+        }
+        label{
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            cursor: text;
+        }
+        input:focus ~ label{
+            top: -30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://png.pngtree.com/element_pic/00/16/07/115783931601b5c.jpg" width="50px" height="50px">
+                <figcaption><a href="">MMU Electro-Company</a></figcaption>
+            </div>
+
+            <div class="nav-link">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="inquire.html">Inquiries</a></li>
+                </ul>
+            </div>
+
+            <div class="login">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-question"><span>Help</span></i>
+            </div>
+
+            <div class="register">
+                <div class="sign">
+                    
+                    <input type="text" id="fname" name="fname" placeholder="">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="sign">
+                    
+                    <input type="text" name="lname" >
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="sign">
+                   
+                    <input type="number" name="phone">
+                    <label for="phone">cellphone</label>
+                </div>
+                <div class="sign">
+                    
+                    <input type="email" name="Email">
+                    <label for="Email">Email Address</label>
+                </div>
+                    <button>Register</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+
+    <section class="sec1" >
+        <center><h1>MMU ELECTOR-COMPANY</h1></center>
+        <center><h2><a href="#">MMU ELECTOR-COMPANY</a> is a business that specializes in the production, design, 
+            and development of electronic products and systems. These companies may manufacture a wide 
+            range of electronic devices, including computers, smartphones, televisions, audio equipment, 
+            and more. Electronic companies may also develop and sell software, as well as provide support 
+            and maintenance services for their products. Many electronic companies are multinational 
+            corporations with global reach, and they often operate in highly competitive industries, 
+            requiring them to continually innovate and adapt to new technologies and changing consumer demands.</h2></center>
+        <div class="sec1.1">
+            <div class="container">
+                <div class="layer"></div>
+                    <div>
+                        <p>Welcome to MMU Electro-Company where best services are offered at an
+                            affordable price.<br><mark>Get started and enjoy the facilities</mark>
+                        </p>
+                        <div class="auto-type">
+                            <p><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+                          </div>
+                    </div>
+                    <img src="images/phone2.jpg" width="200px" height="200px">
+                
+            </div>
+
+        </div><br><br><br><br><br><br>
+    </section>
+    <hr>
+    <section class="sec2">
+        <center><h1>MAIN BRANCHES COUNTRY WIDE</h1></center>
+        <div class="location">
+            <div id="office">
+                <center> <img src="images/building2.jpg" width="200px" height="150px">
+                <figcaption>Kakiumayo electoro office</figcaption>
+                <p>The general office in Nairobi, besides afya centre</p>
+                <center><div id="socialmedia">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div></center></center>
+            </div>
+
+            <div id="office">
+                <center> <img src="images/building3.jpg" width="200px" height="150px">
+                <figcaption>MUKOMARI BENDVINCH</figcaption>
+                <p>@ Kisumu City(siaya)</p>
+                <center><div id="socialmedia">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div></center></center>
+            </div>
+
+            <div id="office">
+                <center> <img src="images/building4.jpg" width="200px" height="150px">
+                <figcaption>Mombasa Keffa office</figcaption>
+                <p>Near pwani limited company</p>
+                <center><div id="socialmedia">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div></center></center>
+            </div>
+
+            <div id="office">
+                <center> <img src="images/building5.jpg" width="200px" height="150px">
+                <figcaption>Sangála office</figcaption>
+                <p>Eldoret county</p>
+                <center><div id="socialmedia">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div></center></center>
+            </div>
+
+            <div id="office">
+                <center><img src="images/building6.jpg" width="200px" height="150px">
+                <figcaption>Maywa Kambele office</figcaption>
+                <p>Kakamega county opposite tom moya generation plaza</p>
+                <center><div id="socialmedia">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div></center></center>
+            </div>
+
+           
+        </div>
+        <center><h1>LOCATION ON GOOGLE MAP</h1></center>
+       <center> <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8105058792285!2d36.82589631445877!3d-1.2878358359903772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11262da332f5%3A0xa7ea505f9c803a15!2sAfya%20Centre%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1680051401506!5m2!1sen!2ske" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p></center>
+    </section>
+    <hr><BR>
+
+    <section class="footer">
+        <footer>
+            <div class="footer-top">
+                <div id="div-left">
+                    <img src="https://png.pngtree.com/element_pic/00/16/07/115783931601b5c.jpg" width="100px" height="100px">
+                    <div>
+                        <p>Get access to all exclusive offers, discounts and deals!</p>
+                        <span id="downl">FREE DOWNLOAD NOW</span><i class="fa-brands fa-apple"></i><i class="fa-brands fa-android"></i>
+                    </div>
+                </div>
+
+                <div id="div-right">
+                    <h3>New to MMU ELECTRO-COMPANY</h3>
+                    <P>Subscribe to our communications to receive special offers and latest news!</P>
+                    <P>
+                        <input type="email" placeholder="Enter your email address..." >
+                        <button>Male</button>
+                        <button>Female</button>
+                    </P>
+                </div>
+            </div>
+
+            <div class="more">
+                <div class="morecont">
+                <div class="cont">
+                    <h3>LET US HELP YOU</h3>
+                    <ul>
+                        <li><h6><a href="#">Help Center</a></h6></li>
+                        <li><h6><a href="#">How to Shop on MMU ELECTRO-COMPANY</a></h6></li>
+                        <li><h6><a href="#">Track Your Order</a></h6></li>
+                        <li><h6><a href="#">Shipping and Delivery</a></h6></li>
+                        <li><h6><a href="#">Return Policy</a></h6></li>
+                        <li><h6><a href="#">Dispute Resolution Policy</a></h6></li>
+                        <li><h6><a href="#">Corporate and Bulk Purchase</a></h6></li>
+                    </ul>
+                </div>
+
+                <div class="cont">
+                    <h3>GET TO KNOW US</h3>
+                    <ul>
+                        <li><h6><a href="#">Careers</a></h6></li>
+                        <li><h6><a href="#">About Us</a></h6></li>
+                        <li><h6><a href="#">MMMU ELECTRO-COMPANY Express</a></h6></li>
+                        <li><h6><a href="#">Terms and Conditions</a></h6></li>
+                        <li><h6><a href="#">Privacy Notice</a></h6></li>
+                        <li><h6><a href="#">Cookies Notice</a></h6></li>
+                        <li><h6><a href="#">Black Friday</a></h6></li>
+                    </ul>
+                </div>
+
+                <div class="cont">
+                    <h3>MMU ELECTRO-COMPANY INTERNATIONAL</h3>
+                    <ul>
+                        <li><h6><a href="#">Algeria</a></h6></li>
+                        <li><h6><a href="#">Ivory Coast</a></h6></li>
+                        <li><h6><a href="#">Egypt</a></h6></li>
+                        <li><h6><a href="#">Ghana</a></h6></li>
+                        <li><h6><a href="#">Morocco</a></h6></li>
+                        <li><h6><a href="#">Nigeria</a></h6></li>
+                        <li><h6><a href="#">Senegal</a></h6></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copywrite">
+                <marquee><h2>&copy;MMU ELECTRO-COMPAY LIMIED||Join Us Today||Now Available every where||country wide||Link With Us Through</h2></marquee>
+                <center><div id="socialmedia">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div></center>
+            </div>
+            </div>
+        </footer>
+    </section>
+
+
+</body>
+<script>
+    const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
+
+const textArray = ["Welcome to MMU Electro-Company!", "Get a product of your choise at an affordable prices...", "What a you waiting...?", "sign up and Get started with...", "MMU Electro-Company."];
+const typingDelay = 200;
+const erasingDelay = 50;
+const newTextDelay = 2000; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+  	setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+	if (charIndex > 0) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+  if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+</script>
+</html>

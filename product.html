@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCT-253-034/2021  FELIX WEBBO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        nav{
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(153, 133, 124);
+            padding: 10px;
+            width: 97%;
+            position: fixed;
+            z-index: 999;
+
+        }
+        .navlinks{
+            padding-top: 20px;
+
+        }
+        .navlinks i:hover{
+            color: orange;
+        }
+        .navlinks i{
+            margin: 20px;
+            font-size: 30px;
+            transition: 1s;
+        }
+        .navlinks span{
+            font-size: 15px;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .empty{
+            background-color: darkturquoise;
+            height: 200px;
+        }
+        .product-container .product{
+            width: 200px;
+            height: 360px;
+            background-color: beige;
+            padding: 5px;
+            position: relative;
+            transition: 1s;
+        }
+        .product-container .product:hover{
+            box-shadow: 2px 2px 2px 2px gold;
+            border-radius: 3px;
+            bottom: 6px;
+            border: 2px solid indigo;
+            
+            
+        }
+        .product-container .product:hover .cart-btn{
+            display: initial;
+        }
+        .product span{
+            background-color: blue;
+            color: white;
+            border-radius: 2px;
+            padding: 3px;
+        }
+        .cart-btn{
+            background-color: goldenrod;
+            width: 200px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            position: absolute;
+            bottom: 0rem;
+            display: none;
+            transition: 1s;
+        }
+        .product h4{
+            background-color: rgb(29, 1, 61);
+            width: fit-content;
+            color: whitesmoke;
+            font-weight: 600;
+            padding: 10px;
+            border-radius: 10rem;
+            font-size: 20px;
+            position: relative;
+            top: -6px;
+            left: 8rem;
+        }
+        .product i{
+            color: orange;
+        }
+
+        .more{
+            background-color: rgba(5, 1, 1, 0.918);
+            padding: 10px 5%;
+        }
+        .morecont{
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .cont h3{
+            color: goldenrod;
+        }
+        .cont ul li{
+            list-style: none;
+            padding: 0px;
+        }
+        .cont ul li a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+        .cont ul li a:hover{
+            text-decoration: underline;
+        }
+        .copywrite{
+            background-color: wheat;
+        
+            margin: 5px;padding: 5px;
+        }
+        .copywrite .socialmedia a{
+            font-size: 50px;
+        }
+        marquee{
+            background-color: coral;
+            border-radius: 5rem;
+            height: 3.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://png.pngtree.com/element_pic/00/16/07/115783931601b5c.jpg" width="50px" height="50px">
+                <figcaption><a href="">MMU Electro-Company</a></figcaption>
+            </div>
+            
+            <div class="navlinks">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-user"><span>account</span></i>
+                <i class="fa-sharp fa-solid fa-question"><span>Help</span></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="empty"></section>
+    <hr>
+    <br>
+
+    <section class="sect1">
+        <div class="product-container">
+            <div class="product">
+                <img src="images/headphone1.jpg" width="200px" height="150px" ><br>
+                <span>Shipped from abroad</span>
+                <p>Wireless Foldable Bluetooth Headphone</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i><BR>
+                <h4>$ 1.5</h4>
+                <button class="cart-btn">ADD TO CART</button>
+            </div>
+
+            <div class="product">
+                <img src="images/headphone2.jpg" width="200px" height="150px" ><br>
+                <span>Shipped from abroad</span>
+                <p>Wired Extra Bass Headphones Headsets</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i><BR>
+                <h4>$ 2</h4>
+                <button class="cart-btn">ADD TO CART</button>
+            </div>
+
+            <div class="product">
+                <img src="images/keyboard1.jpg" width="200px" height="150px" ><br>
+                <span>Shipped from abroad</span>
+                <p>Bluetooth /  Wireless / USB Wired Three Modes Brown Switch Tablet Mobile Gaming Mechanical Keyboard With  Backlight</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i><BR>
+                <h4>$ 4.5</h4>
+                <button class="cart-btn">ADD TO CART</button>
+            </div>
+
+            <div class="product">
+                <img src="images/keyboard2.jpg" width="200px" height="150px" ><br>
+                <span>Shipped from abroad</span>
+                <p>Bluetooth / 2.4G Wireless / USB Wired Three Modes Blue Switch Tablet Mobile Gaming</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i><BR>
+                <h4>$ 2.5</h4>
+                <button class="cart-btn">ADD TO CART</button>
+            </div>
+
+            <div class="product">
+                <img src="images/keyboard3.jpg" width="200px" height="150px" ><br>
+                <span>Shipped from abroad</span>
+                <p>Bosston Wired Computer Gaming Keyboard</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i><BR>
+                <h4>$ 1.5</h4>
+                <button class="cart-btn">ADD TO CART</button>
+            </div>
+
+            <div class="product">
+                <img src="images/laptop1.jpg" width="200px" height="150px" ><br>
+                <span>Shipped from abroad</span>
+                <p>HP Refurbished EliteBook 820 , Intel Core I5, 8GB RAM, 500GB HDD
+                </p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i><BR>
+                <h4>$ 34.5</h4>
+                <button class="cart-btn">ADD TO CART</button>
+            </div>
+
+            <div class="product">
+                <img src="images/laptop2.jpg" width="200px" height="150px" ><br>
+                <span>Shipped from abroad</span>
+                <p>Apple  Pro 13" Core I5 16GB RAM, 1TB HDD</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i><BR>
+                <h4>$ 20.5</h4>
+                <button class="cart-btn">ADD TO CART</button>
+            </div>
+
+            <div class="product">
+                <img src="images/laptop3.jpg" width="200px" height="150px" ><br>
+                <span>Shipped from abroad</span>
+                <p>Apple  Pro (13-inch) Intel Core I5 8Gb RAM, 256Gb SSD </p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i><BR>
+                <h4>$ 55.7</h4>
+                <button class="cart-btn">ADD TO CART</button>
+            </div>
+
+            <div class="product">
+                <img src="images/laptop4.jpg" width="200px" height="150px" ><br>
+                <span>Shipped from abroad</span>
+                <p>Apple Core I7, 16GB RAM, 256GB SSD 15 INCH </p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i><BR>
+                <h4>$ 75.5</h4>
+                <button class="cart-btn">ADD TO CART</button>
+            </div>
+
+            <div class="product">
+                <img src="images/mouse1.jpg" width="200px" height="150px" ><br>
+                <span>Shipped from abroad</span>
+                <p>Wireless Mouse 2.4GHz Ultra Slim</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i><BR>
+                <h4>$ 3.5</h4>
+                <button class="cart-btn">ADD TO CART</button>
+            </div>
+
+            <div class="product">
+                <img src="images/mouse2.jpg" width="200px" height="150px" ><br>
+                <span>Shipped from abroad</span>
+                <p>HP 2.4 GHZ Wireless Optical Mouse  -black</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i><BR>
+                <h4>$ 2.5</h4>
+                <button class="cart-btn">ADD TO CART</button>
+            </div>
+
+            <div class="product">
+                <img src="images/mouse3.jpg" width="200px" height="150px" ><br>
+                <span>Shipped from abroad</span>
+                <p>Logitech Mouse Pad - Custom Logitech Designer's </p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i><BR>
+                <h4>$ 9.5</h4>
+                <button class="cart-btn">ADD TO CART</button>
+            </div>
+
+            <div class="product">
+                <img src="images/mouse4.jpg" width="200px" height="150px" ><br>
+                <span>Shipped from abroad</span>
+                <p>Wireless Mouse Best Quality Gaming Mouse</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i><BR>
+                <h4>$ 5.5</h4>
+                <button class="cart-btn">ADD TO CART</button>
+            </div>
+
+            <div class="product">
+                <img src="images/phone2.jpg" width="200px" height="150px" ><br>
+                <span>Shipped from abroad</span>
+                <p>Oppo F11, 6.50",6GB RAM,128GB</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i><BR>
+                <h4>$ 18.5</h4>
+                <button class="cart-btn">ADD TO CART</button>
+            </div>
+
+            <div class="product">
+                <img src="images/phone1.jpg" width="200px" height="150px" ><br>
+                <span>Shipped from abroad</span>
+                <p>Samsung Galaxy A13, 6.6", 128GB</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i><BR>
+                <h4>$ 26.7</h4>
+                <button class="cart-btn">ADD TO CART</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="more">
+            <div class="morecont">
+            <div class="cont">
+                <h3>LET US HELP YOU</h3>
+                <ul>
+                    <li><h6><a href="#">Help Center</a></h6></li>
+                    <li><h6><a href="#">How to Shop on MMU ELECTRO-COMPANY</a></h6></li>
+                    <li><h6><a href="#">Track Your Order</a></h6></li>
+                    <li><h6><a href="#">Shipping and Delivery</a></h6></li>
+                    <li><h6><a href="#">Return Policy</a></h6></li>
+                    <li><h6><a href="#">Dispute Resolution Policy</a></h6></li>
+                    <li><h6><a href="#">Corporate and Bulk Purchase</a></h6></li>
+                </ul>
+            </div>
+
+            <div class="cont">
+                <h3>GET TO KNOW US</h3>
+                <ul>
+                    <li><h6><a href="#">Careers</a></h6></li>
+                    <li><h6><a href="#">About Us</a></h6></li>
+                    <li><h6><a href="#">MMMU ELECTRO-COMPANY Express</a></h6></li>
+                    <li><h6><a href="#">Terms and Conditions</a></h6></li>
+                    <li><h6><a href="#">Privacy Notice</a></h6></li>
+                    <li><h6><a href="#">Cookies Notice</a></h6></li>
+                    <li><h6><a href="#">Black Friday</a></h6></li>
+                </ul>
+            </div>
+
+            <div class="cont">
+                <h3>MMU ELECTRO-COMPANY INTERNATIONAL</h3>
+                <ul>
+                    <li><h6><a href="#">Algeria</a></h6></li>
+                    <li><h6><a href="#">Ivory Coast</a></h6></li>
+                    <li><h6><a href="#">Egypt</a></h6></li>
+                    <li><h6><a href="#">Ghana</a></h6></li>
+                    <li><h6><a href="#">Morocco</a></h6></li>
+                    <li><h6><a href="#">Nigeria</a></h6></li>
+                    <li><h6><a href="#">Senegal</a></h6></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copywrite">
+            <marquee><h2>&copy;MMU ELECTRO-COMPAY LIMIED||Join Us Today||Now Available every where||country wide||Link With Us Through</h2></marquee>
+            <center><div id="socialmedia">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-google"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div></center>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
